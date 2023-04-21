@@ -34,7 +34,8 @@ jobs:
           host: ${{ secrets.SSH_IP }} #云服务器的ip
           username: ${{ secrets.SSH_USERNAME }} #云服务器的用户名
           password: ${{ secrets.SSH_PASSWORD }} #云服务器的密码
-          script: (sudo docker stop frps || true) && \
-            (sudo docker rm -f frps || true) && \
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/frps:latest && \
+          script: |
+            (sudo docker stop frps || true) && 
+            (sudo docker rm -f frps || true) && 
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/frps:latest && 
             sudo docker run --restart=always --network host -d -v /frps.ini:/etc/frp/frps.ini --name frps ${{ secrets.DOCKER_USERNAME }}/frps:latest
