@@ -38,4 +38,4 @@ jobs:
             (sudo docker stop frps || true) && 
             (sudo docker rm -f frps || true) && 
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/frps:latest && 
-            sudo docker run --restart=always --network host -d -v /etc/frp:/etc/frp --name frps ${{ secrets.DOCKER_USERNAME }}/frps:latest
+            sudo docker run --network host -d -v /etc/frp:/etc/frp --name frps ${{ secrets.DOCKER_USERNAME }}/frps:latest
