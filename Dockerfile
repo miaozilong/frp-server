@@ -1,5 +1,4 @@
 FROM snowdreamtech/frps
-RUN mkdir /etc/frp -p
-RUN mkdir /app -p
-COPY * /app
+WORKDIR /app
+COPY * .
 EXPOSE 7000 7001 7600 6001
