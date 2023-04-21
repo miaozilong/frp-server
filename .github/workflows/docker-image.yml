@@ -38,4 +38,5 @@ jobs:
             (sudo docker stop frps || true) && 
             (sudo docker rm -f frps || true) && 
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/frps:latest && 
-            sudo docker run --network host -d -v /app:/etc/frp --name frps ${{ secrets.DOCKER_USERNAME }}/frps:latest
+            sudo ping baidu.com
+#            sudo docker run --network host -d -v /app:/etc/frp --name frps ${{ secrets.DOCKER_USERNAME }}/frps:latest
