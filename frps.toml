@@ -1,4 +1,3 @@
-[common]
 bind_port = 32987
 bind_udp_port = 32988
 token = "anquan1st"
