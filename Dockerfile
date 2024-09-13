@@ -1,3 +1,4 @@
 FROM snowdreamtech/frps
 COPY * /etc/frp
-EXPOSE 7000 7001 7600 6001
+RUN rm /etc/frp/frps.toml
+EXPOSE 32987 32988 32989 32990

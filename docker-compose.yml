@@ -1,0 +1,5 @@
+version: "3"
+services:
+  frp-server:
+    image: miaozilong/frp-server:latest
+    network_mode: "host"
